@@ -1,0 +1,99 @@
+* {
+    font-family: 'Roboto Flex', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    margin: 0;
+    background-color: gray;
+    padding:20px;
+    width:100%;
+    position:inherit;
+}
+
+.inner_header{
+    color: white;
+}
+
+.feed{
+    padding: 10px;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+.post_image{
+    width: 100%;
+    height: 60vh;
+    object-fit: contain;
+}
+
+.post_entry{
+    padding:10px;
+    font-size: 17px;
+    margin: 0 auto;
+}
+
+.created_at_date{
+    color: gray;
+    
+}
+
+.post_link:link{
+    color: black;
+    text-decoration: none;
+}
+
+.post_link:visited{
+    color: black;
+}
+
+.post_link:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.post_link:active {
+    color: white;
+}
+
+.page_link li{
+    display: inline-block;
+}
+
+.page_link{
+    display: table;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.field_style{
+    display:block;
+    margin-top:5px;
+    margin-bottom:5px;
+    font-size: 16px;
+}
+
+.homepage_link{
+    text-decoration: none;
+    color: white;
+}
+
+input[type=submit]{
+    padding:5px;
+    width:20%;
+    height: 3.3vh;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    border: 0 none;
+    border-radius: 2px;
+    font-size: 15px;
+}
+
+input[type=submit]:focus{
+    background-color: rgb(102, 102, 102);
+}

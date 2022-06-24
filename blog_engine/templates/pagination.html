@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+
+{% block pagination %}
+<p>{{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</p>
+{% endblock %}

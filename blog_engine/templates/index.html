@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      {% load static %}
+      <link rel="stylesheet" type="text/css" href="{% static 'blog_engine/style.css' %}">
+      <meta charset="utf-8" />
+      <title>Blog Engine</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap" rel="stylesheet"> 
+   </head>
+   <body>
+      <div class="header">
+         <div class='inner_header'>
+            <a href='/' class="homepage_link"><h1>Django Blog Engine</h1></a>
+         </div>
+      </div>
+      <div class="feed">
+         {% block details %}
+         {% for item in object_list %}
+         {% if item.is_published %}
+         <div class="post_entry">
+            <a href={% url 'details' item.pk %} class="post_link">
+            <p style="padding:10px; font-weight: bold;">{{ item.title }}</p>
+            </a>
+            <p class='created_at_date' style="padding:10px">{{ item.created_at }}</p>
+            <p style="margin:auto"><img src={{ item.photo.url }} class="post_image"></p>
+            <p></p>
+         </div>
+         {% endif %}
+         {% endfor %}
+         {% endblock%}
+      </div>
+      <ul class="page_link">
+      {% for l in page_obj.paginator.page_range %}
+      <li><a href="?page={{forloop.counter}}">{{forloop.counter}}</a></li>
+      {% endfor %}
+      </ul>
+   </body>
+</html>
